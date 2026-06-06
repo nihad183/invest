@@ -1,0 +1,397 @@
+.contact-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background:
+        linear-gradient(to right, rgba(11,31,42,0.95) 0%, rgba(11,31,42,0.88) 35%, rgba(11,31,42,0.60) 60%, rgba(11,31,42,0.20) 80%, rgba(11,31,42,0.05) 100%),
+        url('../images/back-contact-invest.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: var(--hero-top-spacing) var(--hero-inline-padding) var(--hero-bottom-spacing);
+}
+.contact-hero h1 { font-size: 48px; margin-bottom: 10px; }
+.contact-hero p { font-size: 18px; opacity: 0.85; }
+
+.contact-main { padding: 80px 10%; }
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+    align-items: start;
+    gap: 50px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    flex: 1 1 400px;
+    background: #f7f7f7;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.contact-direct-card {
+    flex: 0 1 340px;
+    position: relative;
+    overflow: hidden;
+    padding: 28px 24px;
+    background:
+        linear-gradient(135deg, rgba(30, 111, 92, 0.10), rgba(11, 31, 42, 0.04)),
+        #f7f7f7;
+    border: 1px solid rgba(30, 111, 92, 0.12);
+}
+.contact-direct-card::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -70px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(30, 111, 92, 0.18), transparent 70%);
+}
+.direct-card-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: rgba(30, 111, 92, 0.12);
+    color: #1e6f5c;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.contact-direct-card h2 {
+    margin-bottom: 12px;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #0b1f2a;
+}
+.direct-card-text {
+    max-width: 330px;
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4d5b63;
+}
+.direct-email-link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #0b1f2a;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 16px 35px rgba(11,31,42,0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.direct-email-link:hover {
+    transform: translateY(-3px);
+    background: #123446;
+    box-shadow: 0 20px 38px rgba(11,31,42,0.22);
+}
+.direct-email-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+}
+.direct-email-address {
+    font-size: 17px;
+    font-weight: 700;
+    word-break: break-word;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;
+}
+.contact-form button {
+    background: #1e6f5c; color: #fff; padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; font-size: 16px;
+    transition: 0.3s;
+}
+.contact-form button:hover { background: #134d40; }
+.success-message { background: #d4edda; color: #155724; padding: 12px; margin-bottom: 15px; border-radius: 8px; }
+
+.contact-info { flex: 1 1 400px; }
+.contact-claims {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 860px;
+    justify-self: center;
+}
+.contact-claims .info-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.contact-info > h2 {
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    color: #0b1f2a;
+    font-size: 28px;
+    line-height: 1.25;
+    border-bottom: 3px solid rgba(30,111,92,0.18);
+}
+.contact-info-heading {
+    position: relative;
+    margin-bottom: 26px;
+    padding: 26px 28px;
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(11,31,42,0.96), rgba(30,111,92,0.92)),
+        #0b1f2a;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 18px 38px rgba(11,31,42,0.18);
+}
+.contact-info-heading::after {
+    content: "";
+    position: absolute;
+    right: -42px;
+    bottom: -48px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 50%;
+}
+.contact-info-heading span {
+    display: inline-flex;
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.78);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.contact-info-heading h2 {
+    position: relative;
+    margin: 0 0 10px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+.contact-info-heading p {
+    position: relative;
+    max-width: 440px;
+    margin: 0;
+    color: rgba(255,255,255,0.78);
+    font-size: 16px;
+    line-height: 1.7;
+}
+.info-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-bottom: 30px; }
+.info-cards .card { background: #f7f7f7; padding: 25px 20px; border-radius: 15px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.info-cards .card:hover { transform: translateY(-8px); }
+.info-cards .card i { font-size: 28px; color: #1e6f5c; margin-bottom: 10px; }
+.info-cards .card h4 { margin-bottom: 5px; font-size: 18px; }
+.info-cards .card p { font-size: 14px; color: #555; }
+
+.social-contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.social-contact-card h4 {
+    margin-bottom: 14px;
+}
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0;
+    border-radius: 12px;
+    background: rgba(11,31,42,0.04);
+    color: #0b1f2a;
+    text-decoration: none;
+    box-shadow: none;
+    border: 1px solid rgba(11,31,42,0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.social-card i,
+.info-cards .card .social-card i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+.social-card.facebook i { background: #1877f2; }
+.social-card.linkedin i { background: #0a66c2; }
+.social-card.instagram i { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); }
+.social-card.twitter i { background: #0f1419; }
+.social-card:hover {
+    transform: translateY(-5px);
+    color: #1e6f5c;
+    border-color: rgba(30,111,92,0.22);
+    box-shadow: 0 10px 22px rgba(11,31,42,0.12);
+}
+.contact-email-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 14px;
+    padding: 11px 14px;
+    border-radius: 999px;
+    background: rgba(30,111,92,0.10);
+    color: #1e6f5c;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    word-break: break-word;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.contact-email-pill i,
+.info-cards .card .contact-email-pill i {
+    margin: 0;
+    font-size: 14px;
+    color: inherit;
+}
+.contact-email-pill:hover {
+    transform: translateY(-2px);
+    background: #1e6f5c;
+    color: #fff;
+}
+
+@media(max-width:900px){
+    .contact-main { padding: 60px 6%; }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .contact-form,
+    .contact-info {
+        flex: 1 1 100%;
+    }
+    .contact-claims {
+        grid-column: auto;
+    }
+    .contact-claims .info-cards {
+        grid-template-columns: 1fr;
+    }
+    .info-cards { grid-template-columns: 1fr; }
+    .contact-form { padding: 32px 24px; }
+    .contact-direct-card {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+    .contact-direct-card h2 { font-size: 26px; }
+    .direct-card-text { font-size: 16px; }
+    .direct-email-link {
+        display: flex;
+        width: 100%;
+        min-width: 0;
+    }
+    .direct-email-address { font-size: 18px; }
+}
+
+@media(max-width:640px){
+    .contact-hero {
+        min-height: 44vh;
+        background-position: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contact-hero h1 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+    .contact-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    .contact-main {
+        padding: 40px 16px;
+    }
+    .contact-form {
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+    .direct-card-badge {
+        margin-bottom: 14px;
+        padding: 7px 12px;
+        font-size: 11px;
+    }
+    .contact-direct-card h2 {
+        font-size: 24px;
+    }
+    .direct-card-text {
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    .direct-email-link {
+        padding: 16px 16px;
+        border-radius: 14px;
+    }
+    .direct-email-address {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .contact-info-heading {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+    .contact-info-heading h2 {
+        font-size: 24px;
+    }
+    .contact-info-heading p { font-size: 15px; }
+    .info-cards .card {
+        padding: 22px 18px;
+    }
+    .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .social-card {
+        min-height: 44px;
+        padding: 0;
+    }
+    .social-card i,
+    .info-cards .card .social-card i {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+    .contact-info > h2 {
+        font-size: 23px;
+    }
+    .contact-email-pill {
+        width: 100%;
+        border-radius: 12px;
+        font-size: 13px;
+    }
+}
+
+@media(max-width:420px){
+    .contact-hero h1 {
+        font-size: 30px;
+    }
+    .contact-form {
+        padding: 20px 14px;
+    }
+    .contact-direct-card h2 {
+        font-size: 22px;
+    }
+    .direct-email-label {
+        font-size: 11px;
+    }
+    .direct-email-address {
+        font-size: 15px;
+    }
+}
